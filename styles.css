@@ -1,0 +1,49 @@
+#explore_group,
+#develop_group,
+#expand_group {
+    cursor: pointer;
+}
+
+.content_container {
+    list-style: none;
+    padding-inline-start: 0%;
+    padding: 20px;
+}
+
+.develop_inactive_triangle,
+.explore_inactive_triangle,
+.expand_inactive_triangle {
+    color: #0054A433;
+}
+
+.develop_inactive_text,
+.explore_inactive_text,
+.expand_inactive_text {
+    color: #A8A3A3;
+}
+
+.develop_active_triangle,
+.explore_active_triangle,
+.expand_active_triangle {
+    color: #F97352;
+}
+
+.develop_active_text,
+.explore_active_text,
+.expand_active_text {
+    color: #A8A3A3;
+}
+
+#develop_content_container.active,
+#explore_content_container.active,
+#expand_content_container.active {
+    display: inline-block;
+    background-color: #000000;
+}
+
+#develop_content_container.inactive,
+#explore_content_container.inactive,
+#expand_content_container.inactive {
+    display: inline-block;
+    background-color: #EDF2F7;
+}
