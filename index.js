@@ -1,5 +1,4 @@
-var currentActive = 1;
-
+var breakPoint = bootstrapDetectBreakpoint();
 function handleExplore() {
     document.getElementById("explore_group_path").setAttribute("style", "fill: #0054a4")
     document.getElementById("develop_group_path").setAttribute("style", "fill: #393b3d")
@@ -101,3 +100,147 @@ function handleExpand() {
     document.getElementById("8b").classList.replace("expand_inactive_text", "expand_active_text")
     document.getElementById("9b").classList.replace("expand_inactive_text", "expand_active_text")
 }
+
+function handleResize() {
+    if (breakPoint.name === 'sm' || breakPoint.name === 'xs') {
+        document.getElementById("stage_number").innerHTML = 1;
+        document.getElementById("develop_content_container").classList.replace('inactive', 'active')
+        document.getElementById("4a").classList.replace("develop_inactive_triangle", "develop_active_triangle")
+        document.getElementById("5a").classList.replace("develop_inactive_triangle", "develop_active_triangle")
+        document.getElementById("6a").classList.replace("develop_inactive_triangle", "develop_active_triangle")
+        document.getElementById("explore_arrow_1").setAttribute("style", "fill: #f9735200")
+        document.getElementById("explore_arrow_2").setAttribute("style", "fill: #f9735200")
+        document.getElementById("expand_arrow_1").setAttribute("style", "fill: #f9735200")
+        document.getElementById("expand_arrow_2").setAttribute("style", "fill: #f9735200")
+        document.getElementById("develop_arrow_1").setAttribute("style", "fill: #f97352")
+        document.getElementById("develop_arrow_2").setAttribute("style", "fill: #f97352")
+        document.getElementById("4b").classList.replace("develop_active_text", "develop_inactive_text")
+        document.getElementById("5b").classList.replace("develop_active_text", "develop_inactive_text")
+        document.getElementById("6b").classList.replace("develop_active_text", "develop_inactive_text")
+        document.getElementById('4b').innerHTML = `Identify the most valuable business problem`;
+        document.getElementById('5b').innerHTML = `Investigate the available data`;
+        document.getElementById('6b').innerHTML = `Develop and demonstrate a Proof of Concept`;
+        document.getElementById("explore_group_path").setAttribute("style", "fill: #0054a4")
+        document.getElementById("develop_group_path").setAttribute("style", "fill: #393b3d")
+        document.getElementById("expand_group_path").setAttribute("style", "fill: #393b3d")
+        document.getElementById("explore_group").addEventListener("click", function () {
+            document.getElementById("explore_group_path").setAttribute("style", "fill: #0054a4")
+            document.getElementById("develop_group_path").setAttribute("style", "fill: #393b3d")
+            document.getElementById("expand_group_path").setAttribute("style", "fill: #393b3d")
+            document.getElementById("stage_number").innerHTML = 1;
+            document.getElementById('4b').innerHTML = `Identify the most valuable business problem`;
+            document.getElementById('5b').innerHTML = `Investigate the available data`;
+            document.getElementById('6b').innerHTML = `Develop and demonstrate a Proof of Concept`;
+        })
+        document.getElementById('develop_group').addEventListener("click", function () {
+            document.getElementById("explore_group_path").setAttribute("style", "fill: #393b3d")
+            document.getElementById("develop_group_path").setAttribute("style", "fill: #0054a4")
+            document.getElementById("expand_group_path").setAttribute("style", "fill: #393b3d")
+            document.getElementById("stage_number").innerHTML = 2;
+            document.getElementById('4b').innerHTML = `Scope and establish a successful outcome`;
+            document.getElementById('5b').innerHTML = `Train & test the AI model`;
+            document.getElementById('6b').innerHTML = `Process a real data set and deliver the outcome`;
+        })
+        document.getElementById('expand_group').addEventListener("click", function () {
+            document.getElementById("explore_group_path").setAttribute("style", "fill: #393b3d")
+            document.getElementById("develop_group_path").setAttribute("style", "fill: #393b3d")
+            document.getElementById("expand_group_path").setAttribute("style", "fill: #0054a4")
+            document.getElementById("stage_number").innerHTML = 3;
+            document.getElementById('4b').innerHTML = `Integration with business operations`;
+            document.getElementById('5b').innerHTML = `Model hosting`;
+            document.getElementById('6b').innerHTML = `Ongoing monitoring and retraining`;
+        })
+    } else {
+        document.getElementById('1b').innerHTML = `Identify the most valuable business problem`;
+            document.getElementById('2b').innerHTML = `Investigate the available data`;
+            document.getElementById('3b').innerHTML = `Develop and demonstrate a Proof of Concept`;
+            document.getElementById('4b').innerHTML = `Scope and establish a successful outcome`;
+            document.getElementById('5b').innerHTML = `Train & test the AI model`;
+            document.getElementById('6b').innerHTML = `Process a real data set and deliver the outcome`;
+            document.getElementById('7b').innerHTML = `Integration with business operations`;
+            document.getElementById('8b').innerHTML = `Model hosting`;
+            document.getElementById('9b').innerHTML = `Ongoing monitoring and retraining`;
+            handleExplore();
+        document.getElementById("explore_group").addEventListener("click", function () {
+            handleExplore();
+        })
+        document.getElementById('develop_group').addEventListener("click", function () {
+            handleDevelop();
+        })
+        document.getElementById('expand_group').addEventListener("click", function () {
+            handleExpand();
+        })
+    }
+}
+
+document.addEventListener('DOMContentLoaded', function () {
+    if (breakPoint.name === 'sm' || breakPoint.name === 'xs') {
+        document.getElementById("stage_number").innerHTML = 1;
+        document.getElementById("develop_content_container").classList.replace('inactive', 'active')
+        document.getElementById("4a").classList.replace("develop_inactive_triangle", "develop_active_triangle")
+        document.getElementById("5a").classList.replace("develop_inactive_triangle", "develop_active_triangle")
+        document.getElementById("6a").classList.replace("develop_inactive_triangle", "develop_active_triangle")
+        document.getElementById("explore_arrow_1").setAttribute("style", "fill: #f9735200")
+        document.getElementById("explore_arrow_2").setAttribute("style", "fill: #f9735200")
+        document.getElementById("expand_arrow_1").setAttribute("style", "fill: #f9735200")
+        document.getElementById("expand_arrow_2").setAttribute("style", "fill: #f9735200")
+        document.getElementById("develop_arrow_1").setAttribute("style", "fill: #f97352")
+        document.getElementById("develop_arrow_2").setAttribute("style", "fill: #f97352")
+        document.getElementById("4b").classList.replace("develop_active_text", "develop_inactive_text")
+        document.getElementById("5b").classList.replace("develop_active_text", "develop_inactive_text")
+        document.getElementById("6b").classList.replace("develop_active_text", "develop_inactive_text")
+        document.getElementById('4b').innerHTML = `Identify the most valuable business problem`;
+        document.getElementById('5b').innerHTML = `Investigate the available data`;
+        document.getElementById('6b').innerHTML = `Develop and demonstrate a Proof of Concept`;
+        document.getElementById("explore_group_path").setAttribute("style", "fill: #0054a4")
+        document.getElementById("develop_group_path").setAttribute("style", "fill: #393b3d")
+        document.getElementById("expand_group_path").setAttribute("style", "fill: #393b3d")
+        document.getElementById("explore_group").addEventListener("click", function () {
+            document.getElementById("explore_group_path").setAttribute("style", "fill: #0054a4")
+            document.getElementById("develop_group_path").setAttribute("style", "fill: #393b3d")
+            document.getElementById("expand_group_path").setAttribute("style", "fill: #393b3d")
+            document.getElementById("stage_number").innerHTML = 1;
+            document.getElementById('4b').innerHTML = `Identify the most valuable business problem`;
+            document.getElementById('5b').innerHTML = `Investigate the available data`;
+            document.getElementById('6b').innerHTML = `Develop and demonstrate a Proof of Concept`;
+        })
+        document.getElementById('develop_group').addEventListener("click", function () {
+            document.getElementById("explore_group_path").setAttribute("style", "fill: #393b3d")
+            document.getElementById("develop_group_path").setAttribute("style", "fill: #0054a4")
+            document.getElementById("expand_group_path").setAttribute("style", "fill: #393b3d")
+            document.getElementById("stage_number").innerHTML = 2;
+            document.getElementById('4b').innerHTML = `Scope and establish a successful outcome`;
+            document.getElementById('5b').innerHTML = `Train & test the AI model`;
+            document.getElementById('6b').innerHTML = `Process a real data set and deliver the outcome`;
+        })
+        document.getElementById('expand_group').addEventListener("click", function () {
+            document.getElementById("explore_group_path").setAttribute("style", "fill: #393b3d")
+            document.getElementById("develop_group_path").setAttribute("style", "fill: #393b3d")
+            document.getElementById("expand_group_path").setAttribute("style", "fill: #0054a4")
+            document.getElementById("stage_number").innerHTML = 3;
+            document.getElementById('4b').innerHTML = `Integration with business operations`;
+            document.getElementById('5b').innerHTML = `Model hosting`;
+            document.getElementById('6b').innerHTML = `Ongoing monitoring and retraining`;
+        })
+    } else {
+        handleExplore();
+        document.getElementById('1b').innerHTML = `Identify the most valuable business problem`;
+            document.getElementById('2b').innerHTML = `Investigate the available data`;
+            document.getElementById('3b').innerHTML = `Develop and demonstrate a Proof of Concept`;
+            document.getElementById('4b').innerHTML = `Scope and establish a successful outcome`;
+            document.getElementById('5b').innerHTML = `Train & test the AI model`;
+            document.getElementById('6b').innerHTML = `Process a real data set and deliver the outcome`;
+            document.getElementById('7b').innerHTML = `Integration with business operations`;
+            document.getElementById('8b').innerHTML = `Model hosting`;
+            document.getElementById('9b').innerHTML = `Ongoing monitoring and retraining`;
+        document.getElementById("explore_group").addEventListener("click", function () {
+            handleExplore();
+        })
+        document.getElementById('develop_group').addEventListener("click", function () {
+            handleDevelop();
+        })
+        document.getElementById('expand_group').addEventListener("click", function () {
+            handleExpand();
+        })
+    }
+  });
