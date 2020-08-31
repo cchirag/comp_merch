@@ -1,4 +1,5 @@
 var breakPoint = bootstrapDetectBreakpoint();
+
 function handleExplore() {
     document.getElementById("explore_group_path").setAttribute("style", "fill: #0054a4")
     document.getElementById("develop_group_path").setAttribute("style", "fill: #393b3d")
@@ -123,7 +124,7 @@ function handleResize() {
         document.getElementById("explore_group_path").setAttribute("style", "fill: #0054a4")
         document.getElementById("develop_group_path").setAttribute("style", "fill: #393b3d")
         document.getElementById("expand_group_path").setAttribute("style", "fill: #393b3d")
-        document.getElementById("explore_group").addEventListener("click", function () {
+        document.getElementById("explore_group").addEventListener("click", function() {
             document.getElementById("explore_group_path").setAttribute("style", "fill: #0054a4")
             document.getElementById("develop_group_path").setAttribute("style", "fill: #393b3d")
             document.getElementById("expand_group_path").setAttribute("style", "fill: #393b3d")
@@ -132,7 +133,7 @@ function handleResize() {
             document.getElementById('5b').innerHTML = `Investigate the available data`;
             document.getElementById('6b').innerHTML = `Develop and demonstrate a Proof of Concept`;
         })
-        document.getElementById('develop_group').addEventListener("click", function () {
+        document.getElementById('develop_group').addEventListener("click", function() {
             document.getElementById("explore_group_path").setAttribute("style", "fill: #393b3d")
             document.getElementById("develop_group_path").setAttribute("style", "fill: #0054a4")
             document.getElementById("expand_group_path").setAttribute("style", "fill: #393b3d")
@@ -141,7 +142,7 @@ function handleResize() {
             document.getElementById('5b').innerHTML = `Train & test the AI model`;
             document.getElementById('6b').innerHTML = `Process a real data set and deliver the outcome`;
         })
-        document.getElementById('expand_group').addEventListener("click", function () {
+        document.getElementById('expand_group').addEventListener("click", function() {
             document.getElementById("explore_group_path").setAttribute("style", "fill: #393b3d")
             document.getElementById("develop_group_path").setAttribute("style", "fill: #393b3d")
             document.getElementById("expand_group_path").setAttribute("style", "fill: #0054a4")
@@ -152,28 +153,28 @@ function handleResize() {
         })
     } else {
         document.getElementById('1b').innerHTML = `Identify the most valuable business problem`;
-            document.getElementById('2b').innerHTML = `Investigate the available data`;
-            document.getElementById('3b').innerHTML = `Develop and demonstrate a Proof of Concept`;
-            document.getElementById('4b').innerHTML = `Scope and establish a successful outcome`;
-            document.getElementById('5b').innerHTML = `Train & test the AI model`;
-            document.getElementById('6b').innerHTML = `Process a real data set and deliver the outcome`;
-            document.getElementById('7b').innerHTML = `Integration with business operations`;
-            document.getElementById('8b').innerHTML = `Model hosting`;
-            document.getElementById('9b').innerHTML = `Ongoing monitoring and retraining`;
-            handleExplore();
-        document.getElementById("explore_group").addEventListener("click", function () {
+        document.getElementById('2b').innerHTML = `Investigate the available data`;
+        document.getElementById('3b').innerHTML = `Develop and demonstrate a Proof of Concept`;
+        document.getElementById('4b').innerHTML = `Scope and establish a successful outcome`;
+        document.getElementById('5b').innerHTML = `Train & test the AI model`;
+        document.getElementById('6b').innerHTML = `Process a real data set and deliver the outcome`;
+        document.getElementById('7b').innerHTML = `Integration with business operations`;
+        document.getElementById('8b').innerHTML = `Model hosting`;
+        document.getElementById('9b').innerHTML = `Ongoing monitoring and retraining`;
+        handleExplore();
+        document.getElementById("explore_group").addEventListener("click", function() {
             handleExplore();
         })
-        document.getElementById('develop_group').addEventListener("click", function () {
+        document.getElementById('develop_group').addEventListener("click", function() {
             handleDevelop();
         })
-        document.getElementById('expand_group').addEventListener("click", function () {
+        document.getElementById('expand_group').addEventListener("click", function() {
             handleExpand();
         })
     }
 }
 
-document.addEventListener('DOMContentLoaded', function () {
+document.addEventListener('DOMContentLoaded', function() {
     if (breakPoint.name === 'sm' || breakPoint.name === 'xs') {
         document.getElementById("stage_number").innerHTML = 1;
         document.getElementById("develop_content_container").classList.replace('inactive', 'active')
@@ -195,7 +196,7 @@ document.addEventListener('DOMContentLoaded', function () {
         document.getElementById("explore_group_path").setAttribute("style", "fill: #0054a4")
         document.getElementById("develop_group_path").setAttribute("style", "fill: #393b3d")
         document.getElementById("expand_group_path").setAttribute("style", "fill: #393b3d")
-        document.getElementById("explore_group").addEventListener("click", function () {
+        document.getElementById("explore_group").addEventListener("click", function() {
             document.getElementById("explore_group_path").setAttribute("style", "fill: #0054a4")
             document.getElementById("develop_group_path").setAttribute("style", "fill: #393b3d")
             document.getElementById("expand_group_path").setAttribute("style", "fill: #393b3d")
@@ -204,7 +205,7 @@ document.addEventListener('DOMContentLoaded', function () {
             document.getElementById('5b').innerHTML = `Investigate the available data`;
             document.getElementById('6b').innerHTML = `Develop and demonstrate a Proof of Concept`;
         })
-        document.getElementById('develop_group').addEventListener("click", function () {
+        document.getElementById('develop_group').addEventListener("click", function() {
             document.getElementById("explore_group_path").setAttribute("style", "fill: #393b3d")
             document.getElementById("develop_group_path").setAttribute("style", "fill: #0054a4")
             document.getElementById("expand_group_path").setAttribute("style", "fill: #393b3d")
@@ -213,7 +214,7 @@ document.addEventListener('DOMContentLoaded', function () {
             document.getElementById('5b').innerHTML = `Train & test the AI model`;
             document.getElementById('6b').innerHTML = `Process a real data set and deliver the outcome`;
         })
-        document.getElementById('expand_group').addEventListener("click", function () {
+        document.getElementById('expand_group').addEventListener("click", function() {
             document.getElementById("explore_group_path").setAttribute("style", "fill: #393b3d")
             document.getElementById("develop_group_path").setAttribute("style", "fill: #393b3d")
             document.getElementById("expand_group_path").setAttribute("style", "fill: #0054a4")
@@ -225,22 +226,22 @@ document.addEventListener('DOMContentLoaded', function () {
     } else {
         handleExplore();
         document.getElementById('1b').innerHTML = `Identify the most valuable business problem`;
-            document.getElementById('2b').innerHTML = `Investigate the available data`;
-            document.getElementById('3b').innerHTML = `Develop and demonstrate a Proof of Concept`;
-            document.getElementById('4b').innerHTML = `Scope and establish a successful outcome`;
-            document.getElementById('5b').innerHTML = `Train & test the AI model`;
-            document.getElementById('6b').innerHTML = `Process a real data set and deliver the outcome`;
-            document.getElementById('7b').innerHTML = `Integration with business operations`;
-            document.getElementById('8b').innerHTML = `Model hosting`;
-            document.getElementById('9b').innerHTML = `Ongoing monitoring and retraining`;
-        document.getElementById("explore_group").addEventListener("click", function () {
+        document.getElementById('2b').innerHTML = `Investigate the available data`;
+        document.getElementById('3b').innerHTML = `Develop and demonstrate a Proof of Concept`;
+        document.getElementById('4b').innerHTML = `Scope and establish a successful outcome`;
+        document.getElementById('5b').innerHTML = `Train & test the AI model`;
+        document.getElementById('6b').innerHTML = `Process a real data set and deliver the outcome`;
+        document.getElementById('7b').innerHTML = `Integration with business operations`;
+        document.getElementById('8b').innerHTML = `Model hosting`;
+        document.getElementById('9b').innerHTML = `Ongoing monitoring and retraining`;
+        document.getElementById("explore_group").addEventListener("click", function() {
             handleExplore();
         })
-        document.getElementById('develop_group').addEventListener("click", function () {
+        document.getElementById('develop_group').addEventListener("click", function() {
             handleDevelop();
         })
-        document.getElementById('expand_group').addEventListener("click", function () {
+        document.getElementById('expand_group').addEventListener("click", function() {
             handleExpand();
         })
     }
-  });
+});
